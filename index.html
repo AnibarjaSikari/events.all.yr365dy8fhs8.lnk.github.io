@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, user-scalable=no" />
+        <title>
+            Merry Christmas
+        </title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body
+            {
+                height: 100vh;
+                width: 100%;
+                background-color: #000000;
+            }
+            .wrap
+            {
+                height: 100%;
+                width: 100%;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            .wrap .fst
+            {
+                padding: 5px;
+                align-items: center;
+                justify-items: center;
+                height: 200px;
+            }
+            .wrap .fst .txt_box_fst
+            {
+                padding: 3px;
+                align-content: center;
+                text-align: center;
+                text-transform: uppercase;
+                color: #a5ee45;
+                letter-spacing: 3px;
+                font-family: Jokerman;
+                font-size: 20px;
+                padding: 10px;
+            }
+
+/*main part*/
+
+            .main
+            {
+                padding: 3px;
+                align-items: center;
+                justify-content: center;
+                height: 300px;
+                width: 100%;
+            }
+            .main .snd
+            {
+                display: flex;
+                padding: 3px;
+                height: 100%;
+                width: 100%;
+                position: relative;
+            }
+            .main .snd .loader
+            {
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                background: linear-gradient(60deg, red, yellow, blue) ;
+                animation: animate 1s linear infinite;
+            }
+            @keyframes animate
+            {
+                0%
+                {
+                    transform: rotate(0deg);
+                    filter: hue-rotate(0deg);
+                }
+                100%
+                {
+                    transform: rotate(360deg);
+                    filter: hue-rotate(360deg);
+                }
+            }
+            .loader::before
+            {
+                content: '';
+                position: absolute;
+                top: 5px;
+                bottom: 4px;
+                left: 5px;
+                right: 5px;
+                background: #000000;
+                border-radius: 50%;
+                z-index: 1000;
+            }
+            .loader::after
+            {
+                content: '';
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+                border-radius: 50%;
+                z-index: 1;
+                filter: blur(15px);
+            }
+            .main .snd .txt_box_snd
+            {
+                position: relative;
+                height: 100px;
+                width: 100%;
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                margin: auto;
+                border-radius: 50px;
+                color: white;
+                z-index: 1002;
+                font-family: Harlow Solid;
+                color: #0daad1;
+                text-align: center;
+            }
+            .mcb
+            {
+                animation: anim 2s linear infinite;
+            }
+            @keyframes anim
+            {
+                0%
+                {
+                    zoom: 10%;
+                    filter: hue-rotate(0deg);
+                }
+                10%
+                {
+                    zoom: 10%
+                }
+                20%
+                {
+                    zoom: 20%
+                }
+                30%
+                {
+                    zoom: 30%
+                }
+                40%
+                {
+                    zoom: 40%
+                }
+                50%
+                {
+                    zoom: 50%
+                }
+                60%
+                {
+                    zoom: 60%
+                }
+                70%
+                {
+                    zoom: 70%
+                }
+                80%
+                {
+                    zoom: 80%
+                }
+                90%
+                {
+                    zoom: 90%
+                }
+                100%
+                {
+                    zoom: 100%;
+                    filter: hue-rotate(360deg);
+                }
+            }
+            .mca
+            {
+                animation: anim 1s linear infinite;
+            }
+        </style>
+    </head>
+
+<!--html body part-->
+
+    <body>
+        <div class="wrap">
+            <div class="fst">
+                <div class="txt_box_fst"><h1 class="mca">Merry Christmas </h1> from -@nibarja</h1></div>
+            </div>
+            <div class="main">
+                <div class="snd">
+                    <div class="txt_box_snd">
+                        <h1 class="mcb">Merry Christmas</h1>
+                    </div>
+                    <div class="loader">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
